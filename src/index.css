@@ -1,11 +1,11 @@
-@import 'tailwindcss';
+ï»¿@import 'tailwindcss';
 
 @theme {
   --color-indigo-600: #4f46e5;
 }
 
 :root {
-  background-color: #f8fafc; /* C'est l'équivalent de bg-slate-50 */
+  background-color: #f8fafc;
   color: #0f172a;
   font-family: Inter, sans-serif;
 }
