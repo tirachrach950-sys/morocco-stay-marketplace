@@ -1,11 +1,4 @@
 ﻿@import 'tailwindcss';
-
-@theme {
-  --color-indigo-600: #4f46e5;
-}
-
-:root {
-  background-color: #f8fafc;
-  color: #0f172a;
-  font-family: Inter, sans-serif;
-}
+@theme { --color-indigo-600: #4f46e5; }
+:root { background-color: #f8fafc; color: #0f172a; font-family: 'Inter', sans-serif; }
+body { margin: 0; padding: 0; }
