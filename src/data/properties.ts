@@ -1,23 +1,23 @@
 export const properties = [
   {
     id: 1,
-    title: 'Modern Apartment in Casablanca',
-    price: 120,
-    city: 'Casablanca',
-    image: 'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2',
+    title: "Luxury Riad Marrakech",
+    price: 450,
+    city: "Marrakech",
+    image: "https://images.unsplash.com/photo-1539367628448-4bc5c9d171c8?auto=format&fit=crop&q=80&w=800",
   },
   {
     id: 2,
-    title: 'Cozy Riad in Marrakech',
-    price: 90,
-    city: 'Marrakech',
-    image: 'https://images.unsplash.com/photo-1580587771525-78b9dba3b914',
+    title: "Blue Chefchaouen Villa",
+    price: 280,
+    city: "Chefchaouen",
+    image: "https://images.unsplash.com/photo-1548013146-72479768bbaa?auto=format&fit=crop&q=80&w=800",
   },
   {
     id: 3,
-    title: 'Luxury Villa in Agadir',
-    price: 200,
-    city: 'Agadir',
-    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c',
-  },
+    title: "Casablanca Ocean View",
+    price: 320,
+    city: "Casablanca",
+    image: "https://images.unsplash.com/photo-1533619239233-628ce21226c0?auto=format&fit=crop&q=80&w=800",
+  }
 ];
