@@ -3,17 +3,20 @@ import { Search, MapPin, Star, Heart, Navigation, ShieldCheck, Info } from "luci
 
 const SmartImage = ({ src, alt, className }) => {
   const [loaded, setLoaded] = useState(false);
+  const [error, setError] = useState(false);
+
   return (
     <div className={`relative w-full h-full bg-slate-200 overflow-hidden ${className}`}>
       <img
-        src={src}
+        src={error ? "https://images.pexels.com/photos/3581916/pexels-photo-3581916.jpeg?auto=compress&cs=tinysrgb&w=1200" : src}
         alt={alt}
         onLoad={() => setLoaded(true)}
+        onError={() => setError(true)}
         className={`w-full h-full object-cover transition-all duration-1000 ease-out ${
           loaded ? "opacity-100 scale-100" : "opacity-0 scale-110"
         }`}
       />
-      {!loaded && (
+      {!loaded && !error && (
         <div className="absolute inset-0 flex items-center justify-center bg-slate-100 animate-pulse">
           <div className="w-10 h-10 border-4 border-[#8B4513]/20 border-t-[#8B4513] rounded-full animate-spin" />
         </div>
@@ -33,7 +36,7 @@ export default function App() {
       city: "Marrakech", 
       rating: 4.9, 
       tag: "Medina Heritage", 
-      img: "https://images.unsplash.com/photo-1590073844006-33379778ae09?auto=format&fit=crop&q=80&w=1200" 
+      img: "https://images.pexels.com/photos/3889987/pexels-photo-3889987.jpeg?auto=compress&cs=tinysrgb&w=1200" 
     },
     { 
       id: 2, 
@@ -42,7 +45,7 @@ export default function App() {
       city: "Casablanca", 
       rating: 4.8, 
       tag: "Modern Atlantic", 
-      img: "https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&q=80&w=1200" 
+      img: "https://images.pexels.com/photos/1633522/pexels-photo-1633522.jpeg?auto=compress&cs=tinysrgb&w=1200" 
     },
     { 
       id: 3, 
@@ -51,8 +54,7 @@ export default function App() {
       city: "Chefchaouen", 
       rating: 4.7, 
       tag: "The Blue City", 
-      // FIXED IMAGE LINK FOR CHEFCHAOUEN
-      img: "https://images.unsplash.com/photo-1548013146-72479768bbaa?auto=format&fit=crop&q=80&w=1200" 
+      img: "https://images.pexels.com/photos/4253127/pexels-photo-4253127.jpeg?auto=compress&cs=tinysrgb&w=1200" 
     }
   ];
 
@@ -67,7 +69,7 @@ export default function App() {
       </nav>
 
       <header className="relative h-[480px] flex items-center justify-center m-6 rounded-[3.5rem] overflow-hidden shadow-2xl">
-        <SmartImage src="https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?auto=format&fit=crop&q=90&w=2000" alt="Hero" className="absolute inset-0" />
+        <SmartImage src="https://images.pexels.com/photos/2363347/pexels-photo-2363347.jpeg?auto=compress&cs=tinysrgb&w=2000" alt="Hero" className="absolute inset-0" />
         <div className="absolute inset-0 bg-black/40" />
         <div className="relative z-10 text-center w-full max-w-2xl px-6">
           <h2 className="text-6xl md:text-8xl font-serif text-white mb-8 italic drop-shadow-2xl">Find Your Sanctuary</h2>
@@ -86,7 +88,7 @@ export default function App() {
         <div className="flex justify-between items-end mb-16 border-l-4 border-[#8B4513] pl-6">
           <div>
             <h3 className="text-4xl font-serif mb-2">Heritage Collection</h3>
-            <p className="text-slate-500 font-medium italic">Curated luxury for the soulful traveler</p>
+            <p className="text-slate-500 font-medium italic italic">Curated luxury for the soulful traveler</p>
           </div>
           <div className="text-xs font-black uppercase tracking-widest text-[#8B4513] flex items-center gap-2 bg-orange-50 px-4 py-2 rounded-lg border border-orange-100">
             <Info size={14}/> Currency: MAD
