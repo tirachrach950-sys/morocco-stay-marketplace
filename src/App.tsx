@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { Search, MapPin, Star, Heart, Navigation, ShieldCheck, Info } from "lucide-react";
 
-// Component for a smooth-loading image
 const SmartImage = ({ src, alt, className }) => {
   const [loaded, setLoaded] = useState(false);
   return (
@@ -52,6 +51,7 @@ export default function App() {
       city: "Chefchaouen", 
       rating: 4.7, 
       tag: "The Blue City", 
+      // FIXED IMAGE LINK FOR CHEFCHAOUEN
       img: "https://images.unsplash.com/photo-1548013146-72479768bbaa?auto=format&fit=crop&q=80&w=1200" 
     }
   ];
@@ -86,7 +86,7 @@ export default function App() {
         <div className="flex justify-between items-end mb-16 border-l-4 border-[#8B4513] pl-6">
           <div>
             <h3 className="text-4xl font-serif mb-2">Heritage Collection</h3>
-            <p className="text-slate-500 font-medium italic italic">Curated luxury for the soulful traveler</p>
+            <p className="text-slate-500 font-medium italic">Curated luxury for the soulful traveler</p>
           </div>
           <div className="text-xs font-black uppercase tracking-widest text-[#8B4513] flex items-center gap-2 bg-orange-50 px-4 py-2 rounded-lg border border-orange-100">
             <Info size={14}/> Currency: MAD
