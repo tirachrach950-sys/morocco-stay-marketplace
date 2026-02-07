@@ -1,1 +1,5 @@
-@import 'tailwindcss';
+@import 'tailwindcss';html { scroll-behavior: smooth; }
+body { animation: fadeIn 0.8s ease-in-out; }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+.card-smooth { transition: all 0.3s ease-in-out; }
+.card-smooth:hover { transform: translateY(-10px); box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1); }
